@@ -40,6 +40,7 @@ main::-webkit-scrollbar-thumb {
   grid-template-rows: max-content 1fr max-content;
   height: 100vh; /*100% da altura da tela*/ 
   overflow-x: hidden;
+  margin: 0 auto;
 }
 .container,.container1{
   padding: 1.2rem 2.8rem;
@@ -49,7 +50,6 @@ main::-webkit-scrollbar-thumb {
 }
 main{
   min-width: 38rem;
-  margin: 0 auto;
   overflow-y: scroll;
 }
 header{
@@ -93,8 +93,10 @@ header{
   border-radius: 50%;
   object-fit: cover;
 }
+
 .imgprin{
-  width: 100%; 
+  object-fit: cover;
+  width: 100%;
   border-radius: .5rem;
   margin-bottom: 2rem;
   object-fit: cover;
@@ -108,6 +110,7 @@ header{
   filter: hue-rotate(1deg) contrast(1.1) saturate(200%);
   transform: scale(1.05) rotate(-1deg);
 }
+.help{margin: 0 auto;}
  h1,h2{
   color: var(--platform-aliases-shape-principal);
   font-size: 2.4rem;
@@ -117,7 +120,9 @@ header{
 .aux{
   margin-bottom: 3rem;
 }
-
+.aux h1{
+  max-width:100% ;
+}
 .like{
   margin-top: .8rem;
   display: flex;
@@ -136,10 +141,14 @@ section{
   flex-direction: column;
   gap: 3.2rem;
   margin-block: 3.9rem;
-  
+  min-width: 100%;
+  align-items: center;
+}
+section h2{
+  justify-content: flex-start;
 }
 .help,section{
-  width: 38.2rem;
+  max-width: 38.2rem;
 }
 
 figure{
@@ -204,7 +213,7 @@ footer p{
     transform: scale(1.2);
   }
 }
-@media(min-width:1288px){
+@media(min-width:1281px){
  .container,.container1{
   padding-inline: 11.8rem;
  }
@@ -213,13 +222,14 @@ footer p{
  }
  
  .container1{
+  min-width: 80rem;
   margin-block: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
  }
  .help,section{
-  width: 100%;
+  min-width: 100%;
  }
  
  .img{
@@ -245,7 +255,7 @@ section{
  .aux{
   display: flex;
   flex-direction: row;
-  gap: 36rem;
+  gap: 14rem;
   align-items: center;
   margin-bottom: 3.2rem;
  }
@@ -267,7 +277,7 @@ section{
     width: 100%;
   }
   .help,section{
-    width: 100%;
+    min-width: 100%;
    }
   .help p{
     width: 100%;
@@ -286,6 +296,7 @@ section{
     width: 38.4rem; /* ou outro valor apropriado */
     overflow-x: hidden;
   }
+
   .imgprin{
     width: 35rem;
   }
