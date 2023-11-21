@@ -146,6 +146,7 @@ figure{
   display: flex;
   gap:1.6rem;
   align-items: center;
+  max-width: 38rem;
   transition-property: transform;
   transition-duration: 0.2s;
   transition-delay: 0.1s; /* tempo de espera para a transição */
